@@ -17,11 +17,15 @@ This section demonstrates running the .NET Upgrade Assistant against a newly cre
 
 ## Demo app
 
-If you want to test out upgrading a WPF app, download the [Basic WPF Sample]() project.
+You can use the [Basic WPF Sample][wpf-sample] project to test upgrading with the Upgrade Assistant.
 
 ## Analyze your app
 
-The .NET Upgrade Assistant tool 
+The .NET Upgrade Assistant tool includes an analyze mode that provides recommendations on what to do to your project and code upgrading. For example, running the analyze mode on the [Basic WPF Sample][wpf-sample] app produces the following output:
+
+```console
+
+```
 
 ## Run upgrade-assistant
 
@@ -95,3 +99,5 @@ There are several known problems that can occur when using the .NET Upgrade Assi
 - [Upgrade an ASP.NET MVC App to .NET 6](upgrade-assistant-aspnetmvc.md)
 - [Overview of the .NET Upgrade Assistant](upgrade-assistant-overview.md)
 - [.NET Upgrade Assistant GitHub Repository](https://github.com/dotnet/upgrade-assistant)
+
+[wpf-sample]: https://github.com
