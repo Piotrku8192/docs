@@ -59,7 +59,7 @@ For more information about how to pass reference types by reference and by value
 
 ## Return values
 
-Methods can return a value to the caller. If the return type (the type listed before the method name) is not `void`, the method can return the value by using the `return` keyword. A statement with the `return` keyword followed by a value that matches the return type will return that value to the method caller.
+Methods can return a value to the caller. If the return type (the type listed before the method name) is not `void`, the method can return the value by using the [`return` statement](../../language-reference/statements/jump-statements.md#the-return-statement). A statement with the `return` keyword followed by a value that matches the return type will return that value to the method caller.
 
 The value can be returned to the caller by value or, starting with C# 7.0, [by reference](ref-returns.md). Values are returned to the caller by reference if the `ref` keyword is used in the method signature and it follows each `return` keyword. For example, the following method signature and return statement indicate that the method returns a variable named `estDistance` by reference to the caller.
 
@@ -110,8 +110,6 @@ public static void FillMatrix(int[,] matrix)
 }
 ```
 
-For more information, see [return](../../language-reference/keywords/return.md).
-
 ## Async methods
 
 By using the async feature, you can invoke asynchronous methods without using explicit callbacks or manually splitting your code across multiple methods or lambda expressions.
@@ -121,7 +119,7 @@ If you mark a method with the [async](../../language-reference/keywords/async.md
 > [!NOTE]
 > An async method returns to the caller when either it encounters the first awaited object that's not yet complete or it gets to the end of the async method, whichever occurs first.
 
-An async method typically has a return type of <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, <xref:System.Collections.Generic.IAsyncEnumerable%601>or `void`. The `void` return type is used primarily to define event handlers, where a `void` return type is required. An async method that returns `void` can't be awaited, and the caller of a void-returning method can't catch exceptions that the method throws. Starting with C# 7.0, an async method can have [any task-like return type](../../whats-new/csharp-7.md#generalized-async-return-types).
+An async method typically has a return type of <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, <xref:System.Collections.Generic.IAsyncEnumerable%601>or `void`. The `void` return type is used primarily to define event handlers, where a `void` return type is required. An async method that returns `void` can't be awaited, and the caller of a void-returning method can't catch exceptions that the method throws. Starting with C# 7.0, an async method can have [any task-like return type](../../language-reference/keywords/async.md#return-types).
 
 In the following example, `DelayAsync` is an async method that has a return type of <xref:System.Threading.Tasks.Task%601>. `DelayAsync` has a `return` statement that returns an integer. Therefore the method declaration of `DelayAsync` must have a return type of `Task<int>`. Because the return type is `Task<int>`, the evaluation of the `await` expression in `DoSomethingAsync` produces an integer as the following statement demonstrates: `int result = await delayTask`.
 
@@ -171,7 +169,6 @@ For more information, see [Iterators](../concepts/iterators.md).
 - [Inheritance](../../fundamentals/object-oriented/inheritance.md)
 - [Abstract and Sealed Classes and Class Members](abstract-and-sealed-classes-and-class-members.md)
 - [params](../../language-reference/keywords/params.md)
-- [return](../../language-reference/keywords/return.md)
 - [out](../../language-reference/keywords/out.md)
 - [ref](../../language-reference/keywords/ref.md)
 - [Passing Parameters](passing-parameters.md)

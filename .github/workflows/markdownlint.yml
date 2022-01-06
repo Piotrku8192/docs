@@ -9,7 +9,7 @@ on:
       - ".markdownlint.json"
       - ".github/workflows/markdownlint.yml"
       - ".github/workflows/markdownlint-problem-matcher.json"
-  pull_request_target:
+  pull_request:
     paths:
       - "**/*.md"
       - ".markdownlint.json"
@@ -20,6 +20,8 @@ jobs:
   lint:
 
     runs-on: ubuntu-latest
+    permissions:
+        statuses: write
 
     steps:
     - uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675 #@v2

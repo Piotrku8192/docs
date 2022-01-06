@@ -145,7 +145,7 @@ await foreach(VirtualMachine vm in vmCollection.GetAllAsync())
 
 #### Structured Resource Identifier
 
-Resource IDs contain useful information about the resource itself, but they are plain strings that have to be parsed. Instead of implementing your own parsing logic, you can use a `ResourceIdentifier` object which will do the parsing for you: `new ResourceIdentifer("myid");`.
+Resource IDs contain useful information about the resource itself, but they are plain strings that have to be parsed. Instead of implementing your own parsing logic, you can use a `ResourceIdentifier` object which will do the parsing for you: `new ResourceIdentifier("myid");`.
 
 #### Example: Parsing an ID using a ResourceIdentifier object
 
@@ -364,7 +364,7 @@ For more detailed examples, take a look at [samples](https://github.com/Azure/az
 
 - [Managing Resource Groups](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/resourcemanager/Azure.ResourceManager/samples/Sample2_ManagingResourceGroups.md)
 - [Creating a Virtual Network](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/resourcemanager/Azure.ResourceManager/samples/Sample3_CreatingAVirtualNetwork.md)
-- [.NET Management Library Code Samples](/samples/browse/?branch=master&languages=csharp&term=managing%20using%20Azure%20.NET%20SDK)
+- [.NET Management Library Code Samples](/samples/browse/?languages=csharp&terms=managing%20using%20Azure%20.NET%20SDK)
 
 ### Additional Documentation
 

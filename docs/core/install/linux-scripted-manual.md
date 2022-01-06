@@ -78,7 +78,7 @@ For .NET apps that use the *System.Drawing.Common* assembly, you'll also need th
 
 The [dotnet-install scripts](../tools/dotnet-install-script.md) are used for automation and non-admin installs of the **SDK** and **Runtime**. You can download the script from <https://dot.net/v1/dotnet-install.sh>.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Bash is required to run the script.
 
 The script defaults to installing the latest SDK [long term support (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) version, which is .NET 6. To install the current release, which may not be an (LTS) version, use the `-c Current` parameter.
@@ -136,9 +136,9 @@ export PATH=$PATH:$DOTNET_ROOT
 > - **Korn Shell**: *~/.kshrc* or *.profile*
 > - **Z Shell**: *~/.zshrc* or *.zprofile*
 >
-> Edit the appropriate source file for your shell and add `:$HOME/dotnet` to the end of the existing `PATH` statement. If no `PATH` statement is included, add a new line with `export PATH=$PATH:$HOME/dotnet`.
+> Edit the appropriate source file for your shell and add `:$HOME/.dotnet` to the end of the existing `PATH` statement. If no `PATH` statement is included, add a new line with `export PATH=$PATH:$HOME/.dotnet`.
 >
-> Also, add `export DOTNET_ROOT=$HOME/dotnet` to the end of the file.
+> Also, add `export DOTNET_ROOT=$HOME/.dotnet` to the end of the file.
 
 This approach lets you install different versions into separate locations and choose explicitly which one to use by which application.
 

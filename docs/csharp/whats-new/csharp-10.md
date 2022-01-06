@@ -26,7 +26,7 @@ Additional features are available in *preview* mode. You're encouraged to try th
 
 C# 10 is supported on **.NET 6**. For more information, see [C# language versioning](../language-reference/configure-language-version.md).
 
-You can download the latest .NET 6 SDK from the [.NET downloads page](https://dotnet.microsoft.com/download). You can also download [Visual Studio 2022 preview](https://visualstudio.microsoft.com/vs/preview/vs2022/), which includes the .NET 6 SDK.
+You can download the latest .NET 6 SDK from the [.NET downloads page](https://dotnet.microsoft.com/download). You can also download [Visual Studio 2022](https://visualstudio.microsoft.com/vs/), which includes the .NET 6 SDK.
 
 ## Record structs
 
@@ -37,7 +37,7 @@ You can declare value type records using the [`record struct` or `readonly recor
 C# 10 introduces the following improvements related to structure types:
 
 - You can declare an instance parameterless constructor in a structure type and initialize an instance field or property at its declaration. For more information, see the [Parameterless constructors and field initializers](../language-reference/builtin-types/struct.md#parameterless-constructors-and-field-initializers) section of the [Structure types](../language-reference/builtin-types/struct.md) article.
-- A left-hand operand of the [`with` expression](../language-reference/operators/with-expression.md) can be of any structure type.
+- A left-hand operand of the [`with` expression](../language-reference/operators/with-expression.md) can be of any structure type or an anonymous (reference) type.
 
 ## Interpolated string handler
 
@@ -55,7 +55,7 @@ You can use a new form of the [`namespace` declaration](../language-reference/ke
 namespace MyNamespace;
 ```
 
-This new syntax saves both horizontal and vertical space for the most common `namespace` declarations.
+This new syntax saves both horizontal and vertical space for `namespace` declarations.
 
 ## Extended property patterns
 
@@ -79,8 +79,8 @@ For more information, see the [Extended property patterns](~/_csharplang/proposa
 
 C# 10 includes many improvements to how lambda expressions are handled:
 
-- Lambda expressions may have a [natural type](../language-reference/operators/lambda-expressions.md#natural-type-for-lambda-expressions), where the compiler can infer a delegate type from the lambda expression or method group.
-- Lambda expressions may declare a [return type](../language-reference/operators/lambda-expressions.md#declared-return-type) when the compiler can't infer it.
+- Lambda expressions may have a [natural type](../language-reference/operators/lambda-expressions.md#natural-type-of-a-lambda-expression), where the compiler can infer a delegate type from the lambda expression or method group.
+- Lambda expressions may declare a [return type](../language-reference/operators/lambda-expressions.md#explicit-return-type) when the compiler can't infer it.
 - [Attributes](../language-reference/operators/lambda-expressions.md#attributes) can be applied to lambda expressions.
 
 These features make lambda expressions more similar to methods and local functions. They make it easier to use lambda expressions without declaring a variable of a delegate type, and they work more seamlessly with the new ASP.NET Core Minimal APIs.
@@ -120,7 +120,7 @@ Prior to C# 10, there were many scenarios where definite assignment and null-sta
 
 ```csharp
 string representation = "N/A";
-if ((c != null) && c.GetDependentValue(out object obj)) == true)
+if ((c != null && c.GetDependentValue(out object obj)) == true)
 {
    representation = obj.ToString(); // undesired error
 }
@@ -185,7 +185,7 @@ public class TypeAttribute : Attribute
 And to apply the attribute, you use the [`typeof`](../language-reference/operators/type-testing-and-cast.md#typeof-operator) operator:
 
 ```csharp
-[TypeAttribute(typeof(string))] 
+[TypeAttribute(typeof(string))]
 public string Method() => default;
 ```
 
@@ -219,7 +219,7 @@ The type arguments must satisfy the same restrictions as the [`typeof`](../langu
 - `string?` (or any nullable reference type)
 - `(int X, int Y)` (or any other tuple types using C# tuple syntax).
 
-These types aren't directly represented in metadata. They types include annotations that describe the type. In all cases, you can use the underlying type instead:
+These types aren't directly represented in metadata. They include annotations that describe the type. In all cases, you can use the underlying type instead:
 
 - `object` for `dynamic`.
 - <xref:System.IntPtr> instead of `nint` or `unint`.

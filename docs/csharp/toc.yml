@@ -154,8 +154,6 @@ items:
     href: whats-new/csharp-9.md
   - name: C# 8.0
     href: whats-new/csharp-8.md
-  - name: C# 7.0-7.3
-    href: whats-new/csharp-7.md
   - name: Compiler breaking changes
     href: whats-new/breaking-changes.md
   - name: C# Version History
@@ -983,16 +981,6 @@ items:
       items:
       - name: Statement categories
         href: language-reference/keywords/statement-keywords.md
-      - name: Jump Statements
-        items:
-        - name: break
-          href: language-reference/keywords/break.md
-        - name: continue
-          href: language-reference/keywords/continue.md
-        - name: goto
-          href: language-reference/keywords/goto.md
-        - name: return
-          href: language-reference/keywords/return.md
       - name: Exception Handling Statements
         items:
         - name: throw
@@ -1014,8 +1002,6 @@ items:
           href: language-reference/keywords/unchecked.md
       - name: fixed Statement
         href: language-reference/keywords/fixed-statement.md
-      - name: lock Statement
-        href: language-reference/keywords/lock-statement.md
     - name: Method Parameters
       items:
       - name: Passing parameters
@@ -1223,6 +1209,12 @@ items:
     - name: Selection statements
       displayName: if, else, switch, case, when
       href: language-reference/statements/selection-statements.md
+    - name: Jump statements
+      displayName: break, continue, goto, return
+      href: language-reference/statements/jump-statements.md
+    - name: lock statement
+      displayName: thread synchronization, monitor
+      href: language-reference/statements/lock.md
   - name: Special characters
     items:
     - name: Overview
@@ -1244,7 +1236,7 @@ items:
       displayName: AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf
       href: language-reference/attributes/nullable-analysis.md
     - name: Miscellaneous
-      displayName: Conditional, Obsolete, AttributeUsage, ModuleInitializer, SkipLocalsInit
+      displayName: Conditional, Obsolete, AttributeUsage, ModuleInitializer, SkipLocalsInit, module initializer
       href: language-reference/attributes/general.md
   - name: Unsafe code and pointers
     displayName: unsafe code, pointers, fixed buffer, function pointer
